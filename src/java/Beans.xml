@@ -1,0 +1,33 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+       xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id = "samsungHead" class = "hw.robot.heads.SamsungHead"/>
+    <bean id = "toshibaHead" class = "hw.robot.heads.TohsibaHead"/>
+
+    <bean id = "samsungBody" class = "hw.robot.bodies.SamsungBody"/>
+    <bean id = "toshibaBody" class = "hw.robot.bodies.ToshibaBody"/>
+
+    <bean id = "samsungLeftHand" class = "hw.robot.hands.SamsungLeftHand"/>
+    <bean id = "samsungRightHand" class = "hw.robot.hands.SamsungRightHand"/>
+    <bean id = "toshibaLeftHand" class = "hw.robot.hands.ToshibaLeftHand"/>
+    <bean id = "toshibaRightHand" class = "hw.robot.hands.TohsibaRightHand"/>
+
+    <bean id = "samsungLeftLeg" class = "hw.robot.legs.SamsungLeftLeg"/>
+    <bean id = "samsungRightLeg" class = "hw.robot.legs.SamsungRightLeg"/>
+    <bean id = "toshibaLeftLeg" class = "hw.robot.legs.ToshibaLeftLeg"/>
+    <bean id = "toshibaRightLeg" class = "hw.robot.legs.TohsibaRightLeg"/>
+
+    <bean id = "robot" class = "hw.robot.MyRobotT1000">
+        <property name="head" ref="toshibaHead"/>
+        <property name="body" ref="toshibaBody"/>
+        <property name="rightLeg" ref="toshibaRightLeg"/>
+        <property name="leftLeg" ref="samsungLeftLeg"/>
+        <property name="rightHand" ref="toshibaRightHand"/>
+        <property name="leftHand" ref="samsungLeftHand"/>
+    </bean>
+
+</beans>
